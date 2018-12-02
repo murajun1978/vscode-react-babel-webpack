@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --config ./config/jest.config.js",
+    "test": "jest --config ./config/jest.config.js --coverage",
     "start": "webpack-dev-server --config ./config/webpack.dev.js --open",
     "build": "webpack --config ./config/webpack.prod.js"
   },
