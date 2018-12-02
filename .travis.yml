@@ -8,5 +8,6 @@ notifications:
 node_js: '11'
 install: npm install
 script: npm test
+after_script: npx codecov@3
 branches:
   only: master
