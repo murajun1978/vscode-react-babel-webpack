@@ -1,6 +1,8 @@
 import React from 'react';
+import { render } from 'react-testing-library'
 import App from '../';
 
 test('App', () => {
-  expect(true).toBe(true)
+  const { container } = render(<App />);
+  expect(container).toMatchSnapshot();
 });

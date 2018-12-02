@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App 1`] = `
+<div>
+  <div>
+    <p
+      class="app-label"
+    >
+      Welcome React!1
+    </p>
+  </div>
+</div>
+`;
