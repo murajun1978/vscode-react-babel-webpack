@@ -14,7 +14,7 @@ class App extends React.Component {
     return (
       <div>
         <div>
-          <label>{this.state.counter}</label>
+          <label data-testId="counter">{this.state.counter}</label>
         </div>
         <button onClick={this.onIncrement}>+</button>
         <button onClick={this.onDecrement}>-</button>

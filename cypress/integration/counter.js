@@ -1,17 +1,17 @@
 describe('counter', () => {
   it('can increment', () => {
     cy.visit('/')
-      .get('#app > :nth-child(1) > :nth-child(2)')
+      .getByText(/^\+$/)
       .click()
-      .get('label')
+      .getByTestId('counter')
       .should('have.text', '1');
   });
 
   it('can decrement', () => {
     cy.visit('/')
-      .get('#app > :nth-child(1) > :nth-child(3)')
+      .getByText(/^-$/)
       .click()
-      .get('label')
+      .getByTestId('counter')
       .should('have.text', '-1');
   });
 });
