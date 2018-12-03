@@ -3,11 +3,19 @@
 exports[`App 1`] = `
 <div>
   <div>
-    <p
-      class="app-label"
-    >
-      Welcome React!1
-    </p>
+    <div>
+      <label
+        data-testid="counter"
+      >
+        0
+      </label>
+    </div>
+    <button>
+      +
+    </button>
+    <button>
+      -
+    </button>
   </div>
 </div>
 `;
