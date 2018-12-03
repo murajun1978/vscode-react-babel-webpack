@@ -1,6 +1,6 @@
 describe('counter', () => {
   it('can increment', () => {
-    cy.visit('http://localhost:4000/')
+    cy.visit('/')
       .get('#app > :nth-child(1) > :nth-child(2)')
       .click()
       .get('label')
@@ -8,7 +8,7 @@ describe('counter', () => {
   });
 
   it('can decrement', () => {
-    cy.visit('http://localhost:4000/')
+    cy.visit('/')
       .get('#app > :nth-child(1) > :nth-child(3)')
       .click()
       .get('label')
