@@ -1,8 +1,8 @@
 import React from 'react';
+import { increment } from '../../actions/increment';
+import { decrement } from '../../actions/decrement';
+import Button from '../Atoms/Button';
 import './index.css';
-
-const increment = (state, props) => ({ counter: state.counter + 1 });
-const decrement = (state, props) => ({ counter: state.counter - 1 });
 
 class App extends React.Component {
   state = { counter: 0 };
@@ -12,13 +12,12 @@ class App extends React.Component {
 
   render() {
     return (
-      // eslint-disable-line jsx-a11y/label-has-for
       <div>
         <div>
           <p data-testid="counter">{this.state.counter}</p>
         </div>
-        <button onClick={this.onIncrement}>+</button>
-        <button onClick={this.onDecrement}>-</button>
+        <Button onClick={this.onIncrement}>+</Button>
+        <Button onClick={this.onDecrement}>-</Button>
       </div>
     );
   }
