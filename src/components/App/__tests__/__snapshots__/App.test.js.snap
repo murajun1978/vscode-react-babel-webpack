@@ -4,11 +4,11 @@ exports[`App 1`] = `
 <div>
   <div>
     <div>
-      <label
+      <p
         data-testid="counter"
       >
         0
-      </label>
+      </p>
     </div>
     <button>
       +
