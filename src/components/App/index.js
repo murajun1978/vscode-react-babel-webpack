@@ -12,15 +12,16 @@ class App extends React.Component {
 
   render() {
     return (
+      // eslint-disable-line jsx-a11y/label-has-for
       <div>
         <div>
-          <label data-testid="counter">{this.state.counter}</label>
+          <p data-testid="counter">{this.state.counter}</p>
         </div>
         <button onClick={this.onIncrement}>+</button>
         <button onClick={this.onDecrement}>-</button>
       </div>
     );
   }
-};
+}
 
 export default App;
