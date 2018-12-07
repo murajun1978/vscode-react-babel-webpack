@@ -1,10 +1,10 @@
 import React from 'react';
-import { increment } from '../../actions/increment';
-import { decrement } from '../../actions/decrement';
-import Button from '../Atoms/Button';
+import Button from '../../Atoms/Button';
+import { increment } from '../../../actions/increment';
+import { decrement } from '../../../actions/decrement';
 import './index.css';
 
-class App extends React.Component {
+class Counter extends React.Component {
   state = { counter: 0 };
 
   onIncrement = () => this.setState(increment);
@@ -14,7 +14,9 @@ class App extends React.Component {
     return (
       <div>
         <div>
-          <p data-testid="counter">{this.state.counter}</p>
+          <p className="counter-label" data-testid="counter">
+            {this.state.counter}
+          </p>
         </div>
         <Button onClick={this.onIncrement}>+</Button>
         <Button onClick={this.onDecrement}>-</Button>
@@ -23,4 +25,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Counter;
