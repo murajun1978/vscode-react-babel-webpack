@@ -1,28 +1,25 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import Button from '../../Atoms/Button';
-import { increment } from '../../../actions/increment';
-import { decrement } from '../../../actions/decrement';
+import { reducer, initialState } from '../../../reducers/counter';
+import counterActions from '../../../actions/counter';
 import './index.css';
 
-class Counter extends React.Component {
-  state = { counter: 0 };
+const Counter = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+  const actions = counterActions(dispatch);
 
-  onIncrement = () => this.setState(increment);
-  onDecrement = () => this.setState(decrement);
-
-  render() {
-    return (
+  return (
+    <div>
       <div>
-        <div>
-          <p className="counter-label" data-testid="counter">
-            {this.state.counter}
-          </p>
-        </div>
-        <Button onClick={this.onIncrement}>+</Button>
-        <Button onClick={this.onDecrement}>-</Button>
+        <p className="counter-label" data-testid="counter">
+          {state.count}
+        </p>
       </div>
-    );
-  }
-}
+      <Button onClick={actions.reset}>Reset</Button>
+      <Button onClick={actions.increment}>+</Button>
+      <Button onClick={actions.decrement}>-</Button>
+    </div>
+  );
+};
 
 export default Counter;

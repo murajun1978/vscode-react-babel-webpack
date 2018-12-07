@@ -12,6 +12,9 @@ exports[`Counter 1`] = `
       </p>
     </div>
     <button>
+      Reset
+    </button>
+    <button>
       +
     </button>
     <button>

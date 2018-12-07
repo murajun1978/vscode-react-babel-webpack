@@ -14,4 +14,14 @@ describe('counter', () => {
       .getByTestId('counter')
       .should('have.text', '-1');
   });
+
+  it('can reset', () => {
+    cy.visit('/')
+      .getByText(/^\+$/)
+      .click()
+      .getByText(/Reset/)
+      .click()
+      .getByTestId('counter')
+      .should('have.text', '0');
+  });
 });
