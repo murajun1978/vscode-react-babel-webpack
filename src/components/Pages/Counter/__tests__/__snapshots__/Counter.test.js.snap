@@ -2,7 +2,9 @@
 
 exports[`Counter 1`] = `
 <div>
-  <div>
+  <div
+    class="counter-container"
+  >
     <div>
       <p
         class="counter-label"

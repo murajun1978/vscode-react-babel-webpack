@@ -2,14 +2,14 @@ import React, { useReducer } from 'react';
 import Button from '../../Atoms/Button';
 import { reducer, initialState } from '../../../reducers/counter';
 import counterActions from '../../../actions/counter';
-import './index.css';
+import './index.scss';
 
 const Counter = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const actions = counterActions(dispatch);
 
   return (
-    <div>
+    <div className="counter-container">
       <div>
         <p className="counter-label" data-testid="counter">
           {state.count}
